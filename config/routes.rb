@@ -13,6 +13,8 @@ Spree::Core::Engine.add_routes do
           post :payment_confirmation_data
           post :handle_response
         end
+
+        resources :stripe_payment, only: :create
       end
     end
   end
